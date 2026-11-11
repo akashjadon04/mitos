@@ -61,7 +61,7 @@ export const NewProjectModal: FC = () => {
   return (
     <Modal onClose={() => setNewProjectModalOpen(false)} width="75%">
       <ModalHeader>
-        <ModalTitle>New Rivet Project</ModalTitle>
+        <ModalTitle>New Mitos Project</ModalTitle>
       </ModalHeader>
       <ModalBody>
         <div css={modalBody}>
@@ -138,7 +138,7 @@ const BlankProjectTemplate: FC<{
     <div className="template blank-project">
       <h1>Blank Project</h1>
       <p>
-        Creates a new blank Rivet project. The project will have no graphs and no nodes. Great when you have an idea and
+        Creates a new blank Mitos project. The project will have no graphs and no nodes. Great when you have an idea and
         want to start from scratch.
       </p>
       <form onSubmit={createProject}>
@@ -190,7 +190,7 @@ const AiAgentTemplate: FC<{
     <div className="template ai-agent">
       <h1>AI Agent Template</h1>
       <p>
-        Creates a new project from the Rivet AI Agent Template. The template constructs the basic flow for an AI Agent that can use tools to perform specified commands.
+        Creates a new project from the Mitos AI Agent Template. The template constructs the basic flow for an AI Agent that can use tools to perform specified commands.
       </p>
       <p>Run the AI Agent by clicking &quot;Run Main&quot; or &quot;Run&quot; while on the &quot;* Run Command&quot; Graph.</p>
       <form onSubmit={createProject}>
@@ -217,7 +217,7 @@ const MCPAiAgentTemplate: FC<{
     <div className="template ai-agent">
       <h1>MCP AI Agent Template</h1>
       <p>
-        Creates a new project from the Rivet MCP AI Agent Template. The template constructs the basic flow for an AI Agent that can use tools from an MCP server to perform specified commands by calling the tools on the MCP server.
+        Creates a new project from the Mitos MCP AI Agent Template. The template constructs the basic flow for an AI Agent that can use tools from an MCP server to perform specified commands by calling the tools on the MCP server.
       </p>
       <p>Run the AI Agent by clicking &quot;Run Main&quot; or &quot;Run&quot; while on the &quot;* Run Command&quot; Graph.</p>
       <form onSubmit={createProject}>
@@ -270,7 +270,7 @@ const FromTutorialTemplate: FC<{
     <div className="template from-tutorial">
       <h1>From Tutorial</h1>
       <p>
-        Creates a new project from a Rivet tutorial. Select your tutorial using the dropdown below and a new project
+        Creates a new project from a Mitos tutorial. Select your tutorial using the dropdown below and a new project
         will be created, containing the contents of the tutorial project.
       </p>
       <form onSubmit={createProject}>

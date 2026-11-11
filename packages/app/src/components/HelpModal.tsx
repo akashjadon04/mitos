@@ -2,10 +2,6 @@ import { type FC } from 'react';
 import { helpModalOpenState } from '../state/ui';
 import Modal, { ModalTransition, ModalHeader, ModalTitle, ModalBody, ModalFooter } from '@atlaskit/modal-dialog';
 import Button from '@atlaskit/button';
-import DiscordIcon from '../assets/vendor_logos/discord-mark-white.svg?react';
-import GithubIcon from '../assets/vendor_logos/github-mark-white.svg?react';
-import TwitterIcon from '../assets/vendor_logos/twitter-logo.svg?react';
-import YoutubeIcon from '../assets/vendor_logos/youtube-icon.png';
 import QuestionIcon from 'majesticons/line/question-circle-line.svg?react';
 import { css } from '@emotion/react';
 import { useAtom } from 'jotai';
@@ -19,13 +15,15 @@ const styles = css`
     font-size: 16px;
 
     svg {
-      color: white;
+      color: #7952e4;
     }
-
-    img {
-      height: 14px;
-      object-fit: contain;
-    }
+  }
+  .developer-badge {
+    background: rgba(121, 82, 228, 0.12);
+    border: 1px solid rgba(121, 82, 228, 0.3);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
   }
 `;
 
@@ -37,49 +35,41 @@ export const HelpModal: FC = () => {
       {helpModalOpen && (
         <Modal onClose={() => setHelpModalOpen(false)}>
           <ModalHeader>
-            <ModalTitle>Help</ModalTitle>
+            <ModalTitle>Mitos Studio Help & Support</ModalTitle>
           </ModalHeader>
           <ModalBody>
             <div css={styles}>
-              <p>Need help with Rivet? Check out the following places!</p>
+              <div className="developer-badge">
+                <p style={{ margin: 0, fontWeight: 600, color: '#e0e0e0' }}>Developed by Akash Jadon</p>
+                <p style={{ margin: '4px 0 0 0', fontSize: 13, color: '#a0a0a0' }}>
+                  Visual AI Flow & Node Execution Studio
+                </p>
+                <a
+                  href="https://www.linkedin.com/in/akashjadon"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ fontSize: 13, color: '#a78bfa', display: 'inline-block', marginTop: 6 }}
+                >
+                  Connect on LinkedIn &rarr;
+                </a>
+              </div>
 
               <h2>
-                <a href="https://discord.gg/qT8B2gv9Mg" target="_blank" rel="noreferrer">
-                  <DiscordIcon /> Rivet Community Discord
+                <a href="https://www.linkedin.com/in/akashjadon" target="_blank" rel="noreferrer">
+                  <QuestionIcon /> Mitos Documentation & Architecture
                 </a>
               </h2>
               <p>
-                Join the Rivet Community Discord to get help with Rivet, share your creations, discuss prompt
-                engineering, and more!
+                Mitos enables visual prompt engineering, multi-agent orchestrations, and deterministic DAG pipeline
+                execution across local and cloud LLMs.
               </p>
+
               <h2>
-                <a href="https://rivet.ironcladapp.com/docs" target="_blank" rel="noreferrer">
-                  <QuestionIcon /> Rivet Documentation
+                <a href="https://www.linkedin.com/in/akashjadon" target="_blank" rel="noreferrer">
+                  Support & Consultations
                 </a>
               </h2>
-              <p>
-                The Rivet documentation contains a wealth of information on how to use Rivet, documentation for every
-                node, and instructions for integrating Rivet into your own application.
-              </p>
-              <h2>
-                <a href="https://github.com/Ironclad/rivet/issues" target="_blank" rel="noreferrer">
-                  <GithubIcon viewBox="0 0 100 100" /> GitHub Issues
-                </a>
-              </h2>
-              <p>Need to report a bug? Open an issue on GitHub to let us know!</p>
-              <h2>
-                <a href="https://twitter.com/rivet_ts" target="_blank" rel="noreferrer">
-                  <TwitterIcon /> Rivet on X (Twitter)
-                </a>
-              </h2>
-              <p>Join the discussions about Rivet on X!</p>
-              <h2>
-                {' '}
-                <a href="https://www.youtube.com/channel/UCzCPXL6k7kjr26rhfWNmbfA" target="_blank" rel="noreferrer">
-                  <img src={YoutubeIcon} alt="YouTube Logo" /> Rivet YouTube
-                </a>
-              </h2>
-              <p>The Rivet YouTube channel contains tutorials, ideas, and more about how to use Rivet to its best! </p>
+              <p>For custom nodes, MCP server integrations, or enterprise deployment advice, reach out directly.</p>
             </div>
           </ModalBody>
           <ModalFooter>

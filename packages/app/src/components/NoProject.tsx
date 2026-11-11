@@ -81,8 +81,8 @@ const styles = css`
 `;
 
 export const NoProject: FC = () => {
-  const openDocumentation = useOpenUrl('https://rivet.ironcladapp.com/docs');
-  const joinDiscord = useOpenUrl('https://discord.gg/qT8B2gv9Mg');
+  const openDocumentation = useOpenUrl('https://www.linkedin.com/in/akashjadon');
+  const joinDiscord = useOpenUrl('https://www.linkedin.com/in/akashjadon');
   const setNewProjectModalOpen = useSetAtom(newProjectModalOpenState);
   const setSettingsModalOpen = useSetAtom(settingsModalOpenState);
   const openProject = useLoadProjectWithFileBrowser();
@@ -90,11 +90,11 @@ export const NoProject: FC = () => {
   return (
     <div css={styles}>
       <div className="inner">
-        <img src={RivetIcon} alt="Rivet Logo" className="logo" />
+        <img src={RivetIcon} alt="Mitos Logo" className="logo" />
         <Button className="open-settings" onClick={() => setSettingsModalOpen(true)}>
           <GearIcon />
         </Button>
-        <h1>Welcome to Rivet!</h1>
+        <h1>Welcome to Mitos Studio!</h1>
         <p>No project is currently open. You can:</p>
 
         <ul>
@@ -114,7 +114,7 @@ export const NoProject: FC = () => {
             <p>
               Check out the{' '}
               <a href="#" onClick={syncWrapper(openDocumentation)}>
-                Rivet documentation
+                Mitos Documentation
               </a>
             </p>
           </li>
@@ -122,7 +122,7 @@ export const NoProject: FC = () => {
             <p>
               Need help? join the{' '}
               <a href="#" onClick={syncWrapper(joinDiscord)}>
-                <DiscordIcon /> Discord Server
+                <DiscordIcon /> Akash Jadon on LinkedIn
               </a>{' '}
               for ideas, support, and community
             </p>
